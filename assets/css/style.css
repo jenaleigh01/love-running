@@ -16,12 +16,14 @@ body {
     flex-direction: column;
     /* Generic project styles */
     color: #3a3a3a;
-    font-family: "lato" , sans-serif;
+    font-family: "lato", sans-serif;
 
 }
 
-h1, h2, h3 {
-    font-family: 'Oswald' , sans-serif;
+h1,
+h2,
+h3 {
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
@@ -54,7 +56,7 @@ header a {
     list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
@@ -90,7 +92,7 @@ nav {
 
 /* Main content */
 main {
-    
+
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
@@ -116,7 +118,8 @@ main {
     padding-left: 10px;
 }
 
-#cover-text > h2, #cover-text > h3 {
+#cover-text>h2,
+#cover-text>h3 {
     color: #ffffff
 }
 
@@ -135,9 +138,58 @@ main {
     color: #3a3a3a;
 }
 
+#reasons {
+
+    width: 90%;
+    margin: 20px auto;
+
+}
+
+#reasons h2 {
+    margin-bottom: 20px;
+    font-size: 280%;
+    text-align: center;
+
+}
+
+#benefits-physical>div, #benefits-mental>div {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+#benefits p {
+    padding: 0 20px;
+
+}
+
+hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+
+}
+
+#circle-cover-bg {
+    background: url('../images/reasons-image.webp') no-repeat top center / cover;
+    height: 90vw;
+    width: 90vw;
+    margin-bottom: 20px;
+    /* Makes the square into a circle*/
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+
+}
+
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
     /* Header */
     nav {
         display: block;
@@ -146,11 +198,12 @@ main {
         width: fit-content;
         padding-right: 1rem;
     }
+
     #menu {
         display: flex;
     }
 
-    #menu > li {
+    #menu>li {
         padding-left: 1rem;
     }
 
@@ -176,12 +229,13 @@ main {
         right: 50px;
     }
 
+   
+    }
 
-}
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    #menu a:hover{
+    #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
 }
