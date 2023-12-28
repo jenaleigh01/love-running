@@ -99,6 +99,7 @@ main {
 
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
+    /* Add margin at the top to prevent content from being covered by the header*/
     margin-top: 47px;
     /* Enable flex properties for child elements */
     display: flex;
@@ -182,100 +183,100 @@ hr {
     justify-content: center;
 }
 
-    /* /Meetups section*/
-    #times {
-        background: url('../images/dublin-city.webp') no-repeat center/cover;
-        /* Handles responsivity with the need for a media query */
-        display: flex;
-        flex-wrap: wrap;
-    }
+/* /Meetups section*/
+#times {
+    background: url('../images/dublin-city.webp') no-repeat center/cover;
+    /* Handles responsivity with the need for a media query */
+    display: flex;
+    flex-wrap: wrap;
+}
 
-    #times div {
-        color: #fafafa;
-        background-color: rgba(0, 0, 0, .6);
-        padding: 15px;
-        text-align: center;
-        /* This will not wrap on screens of less than 400px wide. 
+#times div {
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 15px;
+    text-align: center;
+    /* This will not wrap on screens of less than 400px wide. 
         Each div will expand to fill the available space on its row */
-        flex-basis: 200px;
-        flex-grow: 1;
-        /* Creates a grid of meet up times over the background image*/
-        border: 2px solid white;
-    }
+    flex-basis: 200px;
+    flex-grow: 1;
+    /* Creates a grid of meet up times over the background image*/
+    border: 2px solid white;
+}
 
-    #times h3 {
-        /* Override the heading color set in general styles */
-        color: #fafafa;
-    }
+#times h3 {
+    /* Override the heading color set in general styles */
+    color: #fafafa;
+}
 
-     /* Gallery page*/
-     #photos img {
-        width: 100%;
-        line-height: 1em;
-    }
+/* Gallery page*/
+#photos img {
+    width: 100%;
+    line-height: 1em;
+}
 
+#photos {
+    line-height: 0;
+}
+
+#signup {
+    background-image: url("../images/signup-image.webp");
+    background-size: cover;
+    background-position: 75%;
+    flex-grow: 1;
+    padding: 20px 10px 0 10px;
+
+}
+
+#signup-form {
+    color: #ffffff;
+    background-color: rgba (60, 60, 60, 0.6);
+    padding: 30px;
+
+}
+
+#signup-form>h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+
+
+}
+
+.radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.join-buttons {
+    background-color: #454b1b;
+    color: #fafafa;
+    border-radius: 2px;
+    font-size: 100%;
+    margin-top: 20px;
+    padding: 15px 32px;
+
+
+}
+
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
     #photos {
-        line-height: 0;
+        column-count: 2;
+        column-gap: 0;
     }
-
-    #signup {
-        background-image: url("../images/signup-image.webp");
-        background-size: cover;
-        background-position: 75%;
-        flex-grow: 1;
-        padding: 20px 10px 0 10px;
-
-    }
-
-    #signup-form {
-        color: #ffffff;
-        background-color: rgba (60, 60, 60, 0.6);
-        padding: 30px;
-
-    }
-
-    #signup-form > h2 {
-        color: #ffffff;
-        margin-bottom: 20px;
-    }
-
-    .text-input {
-        background: transparent;
-        color: #fafafa;
-        width: 100%;
-        height: 25px;
-        margin: 5px 0 20px 0;
-        border: 1px solid #fafafa;
-        border-radius: 2px;
-        padding: 0 5px;
-
-
-    }
-
-    .radio-buttons {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .join-buttons {
-        background-color: #454b1b;
-        color: #fafafa;
-        border-radius: 2px;
-        font-size: 100%;
-        margin-top: 20px;
-        padding: 15px 32px;
-
-
-    }
-
-    /* Media query: large or landscape phones (576px and up) */
-    @media screen and (min-width: 576px) {
-        #photos {
-            column-count: 2;
-            column-gap: 0;
-        }
-    }
+}
 
 
 /* Media query: tablets and larger (768px and up) */
@@ -312,7 +313,7 @@ hr {
     main {
         /* Push main content down to accomodate larger header */
         margin-top: 79px;
-    
+
     }
 
     /* Hero*/
@@ -366,7 +367,7 @@ hr {
     .join-button: hover {
         background-color: #fafafa;
         color: #454b1b;
- }
+    }
 
 }
 
@@ -412,7 +413,7 @@ hr {
     #benefits-physical>div {
         align-self: flex-end;
     }
-    
+
 
 }
 
